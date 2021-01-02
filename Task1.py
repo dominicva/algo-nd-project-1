@@ -53,5 +53,7 @@ def count_unique_numbers(data_set_1, data_set_2):
     return len(unique_numbers)
 
 
-# print('There are {} different telephone numbers in the records'.format(
-#     count_unique_numbers(calls, texts)))
+if __name__ == '__main__':
+    print('There are {} different telephone numbers in the records'.format(
+        count_unique_numbers(calls, texts)))
+

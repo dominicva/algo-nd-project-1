@@ -49,15 +49,26 @@ def key_with_max_value(dictionary):
     return keys[values.index(max(values))]
 
 
-def task_handler(calls_data):
-    unique_numbers_list = unique_numbers(calls_data)
+if __name__ == '__main__':
+    unique_numbers_list = unique_numbers(calls)
     uniques_dictionary_init = build_numbers_dictionary(unique_numbers_list)
     uniques_dictionary_updated = calc_call_totals(
-        uniques_dictionary_init, calls_data)
+        uniques_dictionary_init, calls)
     number_with_longest_call_time = key_with_max_value(
         uniques_dictionary_updated)
-    return number_with_longest_call_time, uniques_dictionary_updated[number_with_longest_call_time]
+    print('{} spent the longest time, {} seconds, on the phone during September 2016.'.format(
+        number_with_longest_call_time, uniques_dictionary_updated[number_with_longest_call_time]))
 
 
-print('{} spent the longest time, {} seconds, on the phone during September 2016.'.format(
-    task_handler(calls)[0], task_handler(calls)[1]))
+# def task_handler(calls_data):
+#     unique_numbers_list = unique_numbers(calls_data)
+#     uniques_dictionary_init = build_numbers_dictionary(unique_numbers_list)
+#     uniques_dictionary_updated = calc_call_totals(
+#         uniques_dictionary_init, calls_data)
+#     number_with_longest_call_time = key_with_max_value(
+#         uniques_dictionary_updated)
+#     return number_with_longest_call_time, uniques_dictionary_updated[number_with_longest_call_time]
+
+
+# print('{} spent the longest time, {} seconds, on the phone during September 2016.'.format(
+#     task_handler(calls)[0], task_handler(calls)[1]))
