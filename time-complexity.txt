@@ -1,0 +1,13 @@
+All worst-case
+
+Task 1:
+Time Complexity O(n)
+
+Task 2:
+Time Complexity O(n^2)
+
+Task 3:
+Time Complexity O(n)
+
+Task 4:
+Time Complexity O(n)
