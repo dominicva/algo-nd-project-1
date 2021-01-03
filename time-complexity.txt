@@ -1,13 +1,33 @@
 All worst-case
 
+Task 0:
+Requires index lookup of calls and texts datasets, which are Python lists.
+In Python lists, values are assigned to and retrieved from specific, known memory locations.
+Therefore, no matter how large the list is, index lookup and assignment take a constant amount
+of time =>  constant time complexity of O(1).
+
 Task 1:
+The most time intensive operation in Task 1 is the for loop in the build_numbers_list function.
+There are no nested loops etc. Therefore, this task has linear time complexity O(n) in the worst case.
 Time Complexity O(n)
 
 Task 2:
-Time Complexity O(n^2)
+The most time intensive operation is the nested for loop in the calc_call_totals function.
+Nested for loops (with only one layer of nesting) suggest quadratic worst-case time complexity => O(n^2)
 
 Task 3:
-Time Complexity O(n)
+The most time-intensive operation here is the call of .sort on the unique_area_codes_and_mobile_prefixes_list list.
+The .sort method uses a special version of merge sort, called Timsort, which has time complexity nlog(2)n.
+Therefore, worst-case time complexity for this task is O(nlog(2)n)
 
 Task 4:
-Time Complexity O(n)
+Same situation as for Task 3. The call of .sort is the most time intensive operation and so we have time-complexity of
+O(nlog(2)n)
+
+
+References:
+https://bradfieldcs.com/algos/analysis/performance-of-python-types/
+
+https://en.wikipedia.org/wiki/Timsort
+
+https://stackoverflow.com/questions/39380593/time-complexity-for-lookup-in-dictionary-values-lists-vs-sets

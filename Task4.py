@@ -52,8 +52,9 @@ for call in calls:
     callers.add(call[0])
 
 
-# the following could have been done more efficiently, but this approach enables us
-# to inspect behavior of suspected telemarketers more closely
+# the following could have been done more efficiently, and is perhaps not best practice
+# for use of dictionaries... but it does enable us to inspect
+# behavior of suspected telemarketers more closely...
 
 # dictionary of callers with various scores initialised to False
 caller_metrics = {}
@@ -76,8 +77,12 @@ for caller in caller_metrics.items():
         potential_telemarketers.add(caller[0])
 
 
+# convert to list to allow for sorting
+potential_telemarketers_list = list(potential_telemarketers)
+potential_telemarketers_list.sort()
+
 if __name__ == '__main__':
     print("These numbers could be telemarketers:")
-    for number in potential_telemarketers:
+    for number in potential_telemarketers_list:
         print(number)
 

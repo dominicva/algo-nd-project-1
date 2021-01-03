@@ -58,6 +58,9 @@ for number in unique_numbers_called_from_bangalore:
     elif number[:3] == '140': # checks for telemarketers
         unique_area_codes_and_mobile_prefixes.add(number[:3])
 
+# convert to list so we can sort results
+unique_area_codes_and_mobile_prefixes_list = list(unique_area_codes_and_mobile_prefixes)
+unique_area_codes_and_mobile_prefixes_list.sort()
 
 """
 Part B: What percentage of calls from fixed lines in Bangalore are made
@@ -84,7 +87,7 @@ percentage_result = num_calls_made_from_bangalore_to_bangalore / total_num_calls
 
 if __name__ == '__main__':
     print("The numbers called by people in Bangalore have codes:")
-    for code in unique_area_codes_and_mobile_prefixes:
+    for code in unique_area_codes_and_mobile_prefixes_list:
         print(code)
-    print(f"{round(percentage_result,1)} percent of calls from fixed lines in Bangalore")
+    print(f"{round(percentage_result,2)} percent of calls from fixed lines in Bangalore")
     print("are calls to other fixed lines in Bangalore.")
